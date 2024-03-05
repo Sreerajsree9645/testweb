@@ -2,8 +2,8 @@
     <head>
         <script type="javascript" src="test.js"></script>
     </head>
-    <style>
-        .my-button {
+    <style> /* submit css*/
+        .submit{ 
           background-color: green;
           color: white;
           padding: 10px 30px;
@@ -12,16 +12,7 @@
           cursor: alias;
         }
       </style>
-      <style>
-        .center {
-        margin: auto;
-        width: 30%;
-        border: 3px solid green;
-        padding: 10px;
-      }
-      </style>
-    
-      <style> 
+       <style> /* reset css*/
         .reset {
           background-color: green;
           color: white;
@@ -32,19 +23,47 @@
         }
       
       </style>
+    <style>/* main css*/
+        .main {
+        margin: auto;
+        width: auto;
+        border: 3px solid rgb(18, 102, 180);
+        padding: 10px;
+      }
+      </style>
+      <style>/* input css*/
+        .input {
+        margin: auto;
+        width: 30%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+      </style>
+       <style>/* output css*/
+        .out {
+        margin: auto;
+        width: 30%;
+        border: 3px solid rgb(71, 16, 14);
+        padding: 10px;
+      }
+      </style>
+      
+    
     <body>
-        <h1>Test Web </h1>
-        <center> <p  class="output" id="log">Login Page</h1></center><br><br>
-        <div class="center">
+        <div class="main">
+        <center> <img src="avatar.jpg" height="150px" width="150px">
+        <center> <h1  class="output" id="log">Login Page</h1><br>
+        <div class="input">
             <form name="form"  >
             USERNAME &nbsp;&nbsp;
                 <input type="text" id="user" name="user" placeholder="Enter the username" required><br><br>
             PASSWORD &nbsp;&nbsp;
                 <input type="text" id="pass" name="pass" placeholder="Enter the password" required><br><br>
-                <input type="button" class="my-button" value="SUBMIT" onclick="validate()">
+                <input type="button" class="submit" value="SUBMIT" onclick="validate()">
                 <input type="reset"  class="reset" onclick="reset()">
             </form>
         </div>
+         </div>
         <script>
             function validate(){
                 
@@ -60,7 +79,7 @@
                 }
                 
             
-        </script>
-         <p id="output"> </p>
+        </script><br>
+        <center><p class="out" id="output"> </p></center> 
     </body>
 </html>
