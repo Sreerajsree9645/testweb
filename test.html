@@ -15,23 +15,34 @@
       <style>
         .center {
         margin: auto;
-        width: 50%;
+        width: 30%;
         border: 3px solid green;
         padding: 10px;
       }
       </style>
+    
+      <style> 
+        .reset {
+          background-color: green;
+          color: white;
+          padding: 10px 30px;
+          border: brown;
+          border-radius: 5px;
+          cursor: alias;
+        }
       
+      </style>
     <body>
         <h1>Test Web </h1>
+        <center> <p  class="output" id="log">Login Page</h1></center><br><br>
         <div class="center">
-            <p id="log">Login Page</p>
-            <p id="login"></p>
             <form name="form"  >
             USERNAME &nbsp;&nbsp;
-                <input type="text" id="user" name="user" placeholder="Enter the username"  required ><br><br>
+                <input type="text" id="user" name="user" placeholder="Enter the username" required><br><br>
             PASSWORD &nbsp;&nbsp;
-                <input type="text" id="pass" name="pass" placeholder="Enter the password"  required><br><br>
-                <input type="button" class="my-button" value="SUBMIT" onclick="validate()"></input>
+                <input type="text" id="pass" name="pass" placeholder="Enter the password" required><br><br>
+                <input type="button" class="my-button" value="SUBMIT" onclick="validate()">
+                <input type="reset"  class="reset" onclick="reset()">
             </form>
         </div>
         <script>
@@ -40,10 +51,16 @@
                    var x= document.getElementById("user").value;
                    var y= document.getElementById("pass").value;
 
-                   document.getElementById("login").innerHTML= x + y;
+                   document.getElementById("output").innerHTML= x + " " + y;
                    
                 }
+
+                function reset(){
+                document.getElementById("output").innerHTML= " ";
+                }
+                
             
         </script>
+         <p id="output"> </p>
     </body>
 </html>
