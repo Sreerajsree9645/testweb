@@ -4,7 +4,7 @@
     </head>
     <style>
         .my-button {
-          background-color: cyan;
+          background-color: green;
           color: white;
           padding: 10px 30px;
           border: brown;
@@ -12,31 +12,38 @@
           cursor: alias;
         }
       </style>
+      <style>
+        .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+      </style>
       
     <body>
         <h1>Test Web </h1>
-        <h1>fff123</h1>
-        <h1>f000 </h1>
-        <div>
-        <p id="login">Login Page</p>
-        <form name="form" onsubmit="return validate()" >
-           USERNAME &nbsp;&nbsp;
-            <input type="text" id="user" name="user" value="Enter the username" min="6" max="10" required ><br><br>
-           PASSWORD &nbsp;&nbsp;
-            <input type="text" id="pass" name="pass" value="Enter the password" min="6" max="16" required><br><br>
-            <input type="submit" class="my-button"></input>
-        </form>
+        <div class="center">
+            <p id="log">Login Page</p>
+            <p id="login"></p>
+            <form name="form"  >
+            USERNAME &nbsp;&nbsp;
+                <input type="text" id="user" name="user" placeholder="Enter the username"  required ><br><br>
+            PASSWORD &nbsp;&nbsp;
+                <input type="text" id="pass" name="pass" placeholder="Enter the password"  required><br><br>
+                <input type="button" class="my-button" value="SUBMIT" onclick="validate()"></input>
+            </form>
         </div>
         <script>
             function validate(){
-                let x= document.forms["form"]["pass"].value;
-                if (x == ""){
-                    alert("enter the username");
-        
-                    return false;
+                
+                   var x= document.getElementById("user").value;
+                   var y= document.getElementById("pass").value;
 
+                   document.getElementById("login").innerHTML= x + y;
+                   
                 }
-            }
+            
         </script>
     </body>
 </html>
