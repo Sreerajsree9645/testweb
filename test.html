@@ -2,17 +2,41 @@
     <head>
         <script type="javascript" src="test.js"></script>
     </head>
+    <style>
+        .my-button {
+          background-color: cyan;
+          color: white;
+          padding: 10px 30px;
+          border: brown;
+          border-radius: 5px;
+          cursor: alias;
+        }
+      </style>
+      
     <body>
-        <h1>sreeraj </h1>
+        <h1>Test Web </h1>
         <h1>fff123</h1>
         <h1>f000 </h1>
-        <form action="">
-            <p>Login Page</p>
-            <label for="opt1"> USERNAME</label> &nbsp;&nbsp;
-            <input type="text" id="user" name="username" value=""><br><br>
-            <label for="opt2"> PASSWORD</label> &nbsp;&nbsp;
-            <input type="text" id="opt2" name="password" value=""><br><br>
-            <div><button>Submit</button></div>
+        <div>
+        <p id="login">Login Page</p>
+        <form name="form" onsubmit="return validate()" >
+           USERNAME &nbsp;&nbsp;
+            <input type="text" id="user" name="user" value="Enter the username" min="6" max="10" required ><br><br>
+           PASSWORD &nbsp;&nbsp;
+            <input type="text" id="pass" name="pass" value="Enter the password" min="6" max="16" required><br><br>
+            <input type="submit" class="my-button"></input>
         </form>
+        </div>
+        <script>
+            function validate(){
+                let x= document.forms["form"]["pass"].value;
+                if (x == ""){
+                    alert("enter the username");
+        
+                    return false;
+
+                }
+            }
+        </script>
     </body>
 </html>
